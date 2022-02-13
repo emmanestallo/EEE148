@@ -1,0 +1,9 @@
+* C:\Users\emman\OneDrive\Desktop\Acads\EEE148\Sim_1.asc
+V1 in 0 SINE(0 10 1k)
+R1 out in 1k
+D1 0 out 1N4148
+.model D D
+.lib C:\Users\emman\OneDrive\Documents\LTspiceXVII\lib\cmp\standard.dio
+.tran 0 10m 0 0.01m
+.backanno
+.end
