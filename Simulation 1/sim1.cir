@@ -3,4 +3,10 @@ V1 in 0 SINE(0 10 1k)
 R1 out in 1k
 D1 0 out 1N4148
 .lib C:\Users\emman\OneDrive\Documents\LTspiceXVII\lib\cmp\standard.dio
+
+.control 
+tran 0.01m 5m 
+plot V(in),V(out) ylabel 'voltage'
+.endc
+
 .end
