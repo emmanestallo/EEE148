@@ -1,0 +1,13 @@
+.title Simulation 1, Circuit 4 
+V1 in 0 SINE(0 10 1k)
+D1 in out 1N4148
+C1 0 out 1e-6
+.lib C:\Users\emman\OneDrive\Documents\LTspiceXVII\lib\cmp\standard.dio
+
+.control
+tran 0.01m 5m 
+plot V(in),V(out) ylabel 'voltage'
+meas tran peak FIND V(out) WHEN V(in)=9.99 RISE=2 
+.endc
+
+.end
