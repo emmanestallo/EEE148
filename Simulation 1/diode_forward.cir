@@ -1,0 +1,18 @@
+.title 1N4148 Forward Voltage 
+V1 in 0 10
+D1 in out 1N4148
+R1 out 0 1
+
+.lib C:\Users\emman\OneDrive\Documents\LTspiceXVII\lib\cmp\standard.dio
+
+.control 
+.option savecurrents
+dc V1 0 5 0.1
+meas dc forward_bias FIND V(in) WHEN @d1[id] = 0.01A
+plot @d1[id] ylabel 'current across D1'
+.endc
+
+
+
+
+.end
