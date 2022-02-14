@@ -1,0 +1,23 @@
+.title RC Circuit
+C1 out in 10e-9
+R1 out 0 1k
+V1 in 0 SINE(0 1 1k) DC 1
+
+.control 
+settype decibel out 
+let start_c  =  10e-9
+let delta_c = 10e-9 
+let stop_c = 100e-9
+let c_act = start_c 
+
+while c_act le stop_c
+	alter C1 c_act 
+	ac dec 10 1 100k 
+	print vdb(out) 
+	let c_act = c_act + delta_c
+end 
+
+.endc
+
+plot vdb(out)
+.end

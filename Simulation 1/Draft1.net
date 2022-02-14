@@ -1,0 +1,7 @@
+* C:\Users\emman\OneDrive\Desktop\Acads\EEE148\Simulation 1\Draft1.asc
+C1 out in 50e-9
+R1 out 0 1k
+V1 in 0 SINE(0 1) AC 1
+.ac dec 10 1 100k
+.backanno
+.end
